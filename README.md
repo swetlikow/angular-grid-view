@@ -32,5 +32,3 @@ A mock service provides sample data. Modify it in `data-mock.service.ts`:
 ## License
 
 This project is licensed under the MIT License.
-
-
