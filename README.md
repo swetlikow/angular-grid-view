@@ -16,22 +16,6 @@ A dynamic and responsive data grid component for Angular, featuring **sorting**,
    ```bash
    npm install
    ```
-2. Add Bootstrap to `angular.json`:
-   ```json
-   "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css"],
-   "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
-   ```
-3. Import the component in your module:
-   ```typescript
-   import { GridTableComponent } from './grid-table.component';
-   ```
-
-## Usage
-
-Add the component in your template:
-   ```html
-   <app-grid-table></app-grid-table>
-   ```
 
 ## Mock Data Service
 
