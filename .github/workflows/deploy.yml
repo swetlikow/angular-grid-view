@@ -1,23 +1,27 @@
-name: Deploy Angular to GitHub Pages
+name: Angular Build and Deploy
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - name: Install Dependencies
-        run: npm install
-      - name: Build Angular App
-        run: npm run build
+          node-version: 20
+
+      - name: Build Angular app to prod
+        run: npm install && npm run build
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
           folder: dist
+          branch: gh-pages
