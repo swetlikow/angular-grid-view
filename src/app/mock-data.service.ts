@@ -41,7 +41,7 @@ export class DataMockService {
     return of({
       data: pagedData,
       totalCount: filteredData.length
-    }).pipe(delay(200)); // Simulating API call delay (500ms)
+    }).pipe(delay(50)); // Simulating API call delay (500ms)
   }
 
   // Helper function to generate mock data
